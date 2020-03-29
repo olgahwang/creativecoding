@@ -16,7 +16,7 @@ function draw() {
   background(0,0,0);
   rotateX(frameCount * 0.01);
   ambientLight(60, 60, 60);
-  for (let j = 0; j < 5; j++) {
+  for (let j = 0; j < 8; j++) {
     push();
     for (let i = 0; i < 60; i++) {
       translate(
