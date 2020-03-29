@@ -1,0 +1,24 @@
+{
+  "name": "creativecoding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "python3 -m http.server 7800"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgahwang/creativecoding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olgahwang/creativecoding/issues"
+  },
+  "homepage": "https://github.com/olgahwang/creativecoding#readme"
+}
