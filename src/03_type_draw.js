@@ -45,7 +45,7 @@ function setup() {
   background(163,255,9);
   smooth();
   cursor(CROSS);
-  fnt = loadFont("../fonts/Antonym-Regular.ttf");
+  fnt = loadFont("../fonts/Antonym-Regular.otf");
   x = mouseX;
   y = mouseY;
 

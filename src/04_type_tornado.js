@@ -9,7 +9,7 @@ let pnt = true;
 function setup() {
   var cnv=createCanvas(innerWidth, innerHeight, WEBGL);
   cnv.parent("typeTornado");
-  font = loadFont("../fonts/Antonym-Regular.ttf");
+  font = loadFont("../fonts/Antonym-Regular.otf");
   colorMode(HSB, 360, 100, 100);
 }
 
