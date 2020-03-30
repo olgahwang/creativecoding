@@ -1,0 +1,35 @@
+.container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+}
+
+button {
+  border: none !important;
+  outline: none;
+  outline:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}
+
+button:onclick {
+  border: 0 !important;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.backButton {
+  color: #FFFFFF;
+  position: absolute;
+}
+
+.backButton:onclick {
+  border: none !important;
+  outline: none;
+  outline:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}

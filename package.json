@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/olgahwang/creativecoding/issues"
   },
-  "homepage": "https://github.com/olgahwang/creativecoding#readme"
+  "homepage": "https://github.com/olgahwang/creativecoding#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
 }

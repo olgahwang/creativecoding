@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Antonym-Regular";
+  src: url("../fonts/Antonym-Regular.otf");
+}
+
+@font-face {
+  font-family: "Antonym-Light";
+  src: url("../fonts/Antonym-Light.otf");
+}
+
+@font-face {
+  font-family: "Graphik-Regular";
+  src: url("../fonts/Graphik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Graphik-RegularItalic";
+  src: url("../fonts/Graphik-RegularItalic.ttf");
+}
+
+@font-face {
+  font-family: "Graphik-RegularItalic";
+  src: url("../fonts/Graphik-Semibold.ttf");
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  background: #000000;
+}
+
+h1 {
+  font-family: "Antonym-Regular";
+  font-size: 9rem;
+}
+
+h2 {
+  font-family: "Antonym-Regular";
+  font-size: 6rem;
+}
+
+h3 {
+  font-family: "Antonym-Regular";
+  font-size: 4rem;
+}
+
+h4 {
+  font-family: "Antonym-Light";
+  font-size: 1.5rem;
+}
+
+a:link {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+  color: #A3FF09;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.mainMenuLinks {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.strokeme
+{
+    color: black;
+    text-shadow:
+    -0.5px -0.5px 0 #FFFFFF,
+    0.5px -0.5px 0 #FFFFFF,
+    -0.5px 0.5px 0 #FFFFFF,
+    0.5px 0.5px 0 #FFFFFF;
+    opacity: 0.5;
+}
+
+* {
+  /* css rule that changes all the fonts on the page */
+  font-family: "Graphik-Regular";
+  color: #FFFFFF;
+}
