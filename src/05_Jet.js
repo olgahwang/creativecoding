@@ -1,30 +1,58 @@
-var s = 1000, t = 100;
+var s = 200, t = 0;
+var s2 = 500, t2 = 0;
 let cnv;
 let fnt;
-let txt = "J";
+let txt = "Jet", txt2 = "Astro";
+let x = 0, y = 0;
+let dist = 0.0;
+let col1 = 259;
+let colInc = 1;
 
 function setup() {
-  cnv = createCanvas(innerWidth, innerHeight);
-  fnt = loadFont('../fonts/Antonym-Regular.otf');
-  //textFont(fnt);
+  cnv = createCanvas(innerWidth/2, innerWidth/2);
+  cnv.parent("jet");
+  fnt = loadFont('../fonts/jet_regular.otf');
+  textFont(fnt);
+  colorMode(HSB, 360, 100, 100);
 }
 
 function draw() {
-  background(7, 15, 47);
+  background(0);
   translate(innerWidth/2, innerHeight);
-  for (i = 0; i < s; i+=5){
-    for (j = 0; j <TAU; j +=PI/30) {
-      R = i/s*TAU*2;
-      // if (sin(j+sin(R+j*2)+t)*i < innerWidth*0.1 || sin(j+sin(R+j*2)+t)*i > innerWidth*0.9){
-      //   fill(214, 27, 25);
-      // } else {
-      //   fill(255);
-      // }
-      fill(72, 84, 123);
-      textSize(R*2);
-      text(txt, sin(j+sin(R+j*2)+t)*i,cos(j-t+R*1.3)*i-500);
+  for (i = 0; i < s; i+=20){
+    for (j = 0; j <TAU; j +=PI/45) {
+      let p;
+      if (i % 40 == 0){
+        p = txt;
+        fill(0, 0, 80);
+        R = i/s*TAU*2;
+        textSize(R*1.2);
+        text(p, sin(j+sin(R+j*2)+t)*i*4-400,cos(j-t+R*5)*i*3-450);
+      } else {
+        let z = frameCount % 66;
+        if (frameCount % 66 == 0) { col1 = 259;}
+        fill(col1, 100, 100);
+        p = txt2;
+        R = i/s*TAU*2;
+        textSize(R*2);
+        text(p, sin(j+sin(R+j*2)+t2)*i*1.5-400,cos(j-t2+R*5)*i*1.5-450);
+      }
     }
   }
-  t+=0.01;
-  //t=mouseY*0.001;
+
+  // for (i = 0; i < s2; i+=100){
+  //   for (j = 0; j <TAU; j +=PI/120) {
+  //     R = i/s2*TAU*noise(i/j, 1, 2);
+  //     fill(72, 84, 123);
+  //     textSize(R*4);
+  //     text(txt2, sin(j+sin(R+j*3)+t2)*i*3,cos(j-t2+R*1.3)*i*5-400);
+  //   }
+  // }
+  t+=0.014;
+  t2+=0.01;
+  if (frameCount % 66 < 33 ) {
+    col1++;
+  } else {
+    col1--;
+  }
 }
