@@ -40,8 +40,8 @@ function draw() {
     }
   }
 
-  t+=0.001;
-  t2+=0.004;
+  t+=0.0001;
+  t2+=0.0004;
   if (frameCount % 66 < 33 ) {
     col1++;
   } else {
