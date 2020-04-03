@@ -12,7 +12,7 @@ let yy = 300;
 let p;
 let cnt = 0;
 function setup() {
-  cnv = createCanvas(innerWidth/2, innerWidth/2);
+  cnv = createCanvas(innerWidth, innerHeight);
   cnv.parent("jet");
   fnt = loadFont('../fonts/jet_regular.otf');
   textFont(fnt);
@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
   background(0);
-  translate(innerHeight/2, innerHeight/2);
+  translate(innerWidth/2, innerHeight/2);
   i = 80;
   for (i = 0; i < s; i+=20){
     for (j = 0; j <TAU; j +=PI/90) {
