@@ -10,11 +10,12 @@ let inter = 0.05; // difference between the sizes of two blobs
 let maxNoise = 500;
 let tx, ty, mv=1;
 let noiseProg = (x) => (x);
+let fnt, fnt2;
 
 function setup() {
   let cnv = createCanvas(innerWidth, innerHeight);
   cnv.parent("secondExperiment");
-  colorMode(HSB, 1);
+  colorMode(HSB, 360, 100, 100,1);
 	angleMode(DEGREES);
   noFill();
 	//noLoop();
@@ -23,10 +24,12 @@ function setup() {
 	noStroke();
   xx = innerWidth/2-100;
   yy = innerWidth/2-100;
+  fnt = loadFont("../fonts/jet_bold.otf");
+  fnt2 = loadFont("../fonts/Antonym-Regular.otf");
 }
 
 function draw() {
-  background(1, 0.9, 0.9);
+  background(224, 95, 59, 1);
   let t = frameCount/100;
   if (sk > 1 && frameCount%2 == 0){
     sk--;
@@ -67,13 +70,18 @@ function draw() {
 
   for (let i = n; i > 0; i--) {
 		let alpha = 1 - noiseProg(i / n);
-		fill((alpha/7 + 0.6)%1, 1,1, alpha);
+    fill(alpha/6*100, 29, 83, alpha);
+    console.log(224*alpha/6*100);
+    //fill((alpha/7 + 0.6)%1, 1,1, alpha);
 		let size = (radius + i * inter)*sk;
 		let k = kMax * sqrt(i/n);
 		let noisiness = maxNoise * noiseProg(i / n);
-    console.log(sk);
     blob(size*mv, xx, yy, k, t - i * step, noisiness);
   }
+  fill(59, 54, 92, 1);
+  textFont(fnt2);
+  textSize(120);
+  text("Olga is a UX designer", 0, innerHeight*0.9);
 }
 
 function blob(size, xCenter, yCenter, k, t, noisiness) {
